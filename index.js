@@ -1,5 +1,3 @@
-require("dotenv").config();
-
 const app = require("express")();
 const packageInfo = require("./package.json");
 const PORT = process.env.PORT || 8080;
@@ -10,6 +8,7 @@ app.get("/", function (req, res) {
     description: packageInfo.description,
     version: packageInfo.version,
     author: packageInfo.author,
+    hello: "from heroku",
   });
 });
 
